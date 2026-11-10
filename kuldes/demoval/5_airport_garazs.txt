@@ -1,0 +1,30 @@
+CÍMZETT: airportgarazs@gmail.com
+TÁRGY: Weboldal-ötlet az Airport Garázsnak, online időpontkéréssel
+MELLÉKLET: demok/airport-garazs/index.html
+-----------------------------------------------------------------
+Tisztelt Airport Garázs!
+
+[Neved] vagyok, weboldalakat készítek kisvállalkozásoknak. Azért írok, mert az Airport Garázsnak jelenleg nincs saját weboldala. Aki a XXII. kerületben autószervizt keres a telefonján, az most csak egy térképes bejegyzést talál önökről, a szolgáltatásokat és az időpontkérés módját nem.
+
+Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Csatoltam, böngészőben megnyílik, nem kell hozzá semmit telepíteni. Amit tud:
+
+- Időpontkérés munkalap-űrlappal: az ügyfél megadja az autó adatait, a hibát és a kívánt napot, így önök már a hívás előtt tudják, mire számítsanak.
+- Műszaki vizsga lejárat-számoló: az ügyfél beírja, mikor járt le utoljára a vizsgája, és látja, mikor esedékes a következő. Ez jó ok arra, hogy visszajöjjön önökhöz.
+- Telefonon is kényelmesen használható, egy gombbal hívható a szerviz.
+
+**Ez csak egy elképzelés, bármit lehet rajta változtatni.**
+
+Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak, így minden hivatalos, és a díjról rendes papír készül. A szerződésmintát kérésre szívesen elküldöm.
+
+Ha érdekli önöket, szívesen felhívom vagy személyesen is megmutatom. Árajánlatot is küldök, ha szeretnék.
+
+Üdvözlettel:
+[Neved]
+[telefonszámod]
+[e-mail címed]
+
+Ha nem szeretne több levelet kapni tőlem, elég egy rövid válasz, és többet nem keresem.
+-----------------------------------------------------------------
+JEGYZETEK (ezt nem küldi el a program)
+- Javasolt ár: 220–280 ezer Ft egyszeri díj és 8 ezer Ft havidíj. Az első levélben ne írj árat.
+- Telefon: 06 1 249 9819.

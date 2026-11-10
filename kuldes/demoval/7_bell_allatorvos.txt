@@ -1,0 +1,30 @@
+CÍMZETT: helmle.peter@chello.hu
+TÁRGY: Weboldal-ötlet a rendelőnek, online időpontkéréssel
+MELLÉKLET: demok/bell-allatorvos/index.html
+-----------------------------------------------------------------
+Tisztelt Doktor Úr!
+
+[Neved] vagyok, weboldalakat készítek kisvállalkozásoknak. Azért írok, mert a rendelőnek jelenleg nincs saját weboldala. A gazdik ezért nem tudják egy helyen megnézni a rendelési időt, és időpontot is csak telefonon tudnak kérni.
+
+Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Csatoltam, böngészőben megnyílik, nem kell hozzá semmit telepíteni. Amit tud:
+
+- Rendelési idők heti bontásban, jól olvashatóan.
+- Időpontkérés: a gazdi megadja az állat adatait és a panaszt, és kiválasztja, mikor jönne.
+- Oltási emlékeztető: a gazdi egy gombbal beteheti a telefonja naptárába, mikor esedékes a következő veszettség elleni oltás. Így magától visszajön.
+
+**Ez csak egy elképzelés, bármit lehet rajta változtatni.**
+
+Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak, így minden hivatalos, és a díjról rendes papír készül. A szerződésmintát kérésre szívesen elküldöm.
+
+Ha érdekli, szívesen felhívom, vagy megbeszélhetjük e-mailben is. Árajánlatot is küldök, ha szeretné.
+
+Üdvözlettel:
+[Neved]
+[telefonszámod]
+[e-mail címed]
+
+Ha nem szeretne több levelet kapni tőlem, elég egy rövid válasz, és többet nem keresem.
+-----------------------------------------------------------------
+JEGYZETEK (ezt nem küldi el a program)
+- A cím egy magánszemély e-mail címe (Helmle Péter). Ha biztos vagy benne, hogy ő az állatorvos, a megszólítás lehet „Tisztelt Dr. Helmle Péter!”.
+- Javasolt ár: 100–150 ezer Ft egyszeri díj és 5 ezer Ft havidíj. Telefon: 06 30 960 8557.

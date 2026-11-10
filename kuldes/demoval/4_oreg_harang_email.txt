@@ -1,6 +1,7 @@
-CÍMZETT: [ellenőrizd az oregharang.hu-n vagy a Facebook-oldalukon; ha nincs e-mail, Facebook-üzenet vagy telefon: +36 30 927 9011]
+CÍMZETT: 
+# Nincs ismert e-mail cím. Nézd meg az oregharang.hu-n vagy a Facebookon; addig a program kihagyja. Telefon: +36 30 927 9011
 TÁRGY: Weboldal-ötlet az Öreg Harangnak, három nyelven, asztalfoglalással
-MELLÉKLET: 4_oreg_harang_demo.html
+MELLÉKLET: kuldes/demoval/4_oreg_harang_demo.html
 
 -----------------------------------------------------------------
 
@@ -35,8 +36,10 @@ Ha érdekli önöket, szívesen elmegyek személyesen is, vagy telefonon megbesz
 [telefonszámod]
 [e-mail címed]
 
+Ha nem szeretne több levelet kapni tőlem, elég egy rövid válasz, és többet nem keresem.
+
 -----------------------------------------------------------------
-JEGYZETEK (ezt ne küldd el)
+JEGYZETEK (ezt nem küldi el a program)
 
 - Küldés előtt hívd fel őket, vagy nézd meg a Google Mapsen, hogy még működnek-e, és mi a mostani nyitvatartásuk. Ezt írd be a demóba (index.html, NYITVA sor).
 - A fizetési mód nincs ellenőrizve. A demóban szögletes zárójeles helykitöltő áll a helyén.

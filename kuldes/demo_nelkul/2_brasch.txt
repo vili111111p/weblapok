@@ -1,0 +1,25 @@
+CÍMZETT: ifjbrasch@t-online.hu
+TÁRGY: Ingyenes weboldal-terv a Brasch műhelynek
+-----------------------------------------------------------------
+Tisztelt Brasch Bt.!
+
+[Neved] vagyok, weboldalakat készítek kisvállalkozásoknak. Azért írok, mert nem találtam önöknek működő weboldalt. Aki Sopron és Fertőrákos környékén karosszériajavítót keres, az a telefonján nem talál önökről elérhetőséget, szolgáltatást vagy nyitvatartást.
+
+Egy egyszerű, telefonon jól használható oldal ezen segítene: a szolgáltatások listája, a nyitvatartás, egy gombbal hívható szám, és egy űrlap, amin az ügyfél fotót küldhet a sérülésről, hogy önök előre lássák, mire számítsanak.
+
+**Ha érdekli, ingyen elkészítek egy demót, amin megnézheti, hogyan nézne ki az önök oldala.** Ez semmire nem kötelez, és ez csak egy elképzelés lenne, bármit lehet rajta változtatni.
+
+Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak, így minden hivatalos, és a díjról rendes papír készül.
+
+Elég, ha visszaír egy „érdekel”-t, és pár napon belül küldöm a demót.
+
+Üdvözlettel:
+[Neved]
+[telefonszámod]
+[e-mail címed]
+
+Ha nem szeretne több levelet kapni tőlem, elég egy rövid válasz, és többet nem keresem.
+-----------------------------------------------------------------
+JEGYZETEK (ezt nem küldi el a program)
+- A cím egy cégjegyzéki oldalról való (Brasch Karosszériajavító Bt., Fertőrákos, Kápolna u. 2., tel. 99/355-477). Nem biztos, hogy ez ugyanaz, mint a „Brasch Vendégház / Apartman”. Ezért a levél a karosszériajavításról szól.
+- Ellenőrizd a cegek_meglevo_arculattal.csv-ben, hogy melyik Brasch szerepel ott, és mi volt a régi weboldaluk.
