@@ -1,0 +1,7 @@
+[out:json][timeout:300];
+area["ISO3166-1"="HU"][admin_level=2]->.hu;
+(
+  nwr(area.hu)["name"]["opening_hours"][~"^(phone|contact:phone|contact:mobile|mobile)$"~"."][!"website"][!"contact:website"][!"url"][!"brand"][!"brand:wikidata"]
+    [~"^(shop|craft|amenity|tourism|healthcare|office|leisure)$"~"."];
+);
+out center tags;

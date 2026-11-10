@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Öreg Harang Borozó – demóterv</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --bor:#6e1f2a; --bor-sotet:#4a121b; --krem:#f7f0e3; --papir:#fffaf1;
+    --fa:#3b2a1e; --arany:#b8893b; --szoveg:#2b211b; --halvany:#7a6a5c;
+    --zold:#2f6b3a; --piros:#a8332b; --vonal:#e4d6bf;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--krem);color:var(--szoveg);
+    font:17px/1.6 Georgia,"Times New Roman",serif}
+  a{color:var(--bor)}
+  .demo-sav{background:#1d1d1d;color:#fff;font:14px/1.4 system-ui,sans-serif;
+    padding:8px 16px;text-align:center}
+  .demo-sav b{color:#ffd27a}
+  header.fej{position:sticky;top:0;z-index:5;background:var(--bor-sotet);color:var(--krem);
+    display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-size:20px;letter-spacing:.5px;
+    text-decoration:none;color:inherit}
+  .logo svg{width:34px;height:34px}
+  nav{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap;font:15px system-ui,sans-serif}
+  nav a{color:var(--krem);text-decoration:none;opacity:.9}
+  nav a:hover{opacity:1;text-decoration:underline}
+  .nyelv{display:flex;gap:4px;font:13px system-ui,sans-serif}
+  .nyelv button{background:transparent;border:1px solid #ffffff55;color:var(--krem);
+    padding:3px 8px;border-radius:4px;cursor:pointer}
+  .nyelv button[aria-pressed=true]{background:var(--krem);color:var(--bor-sotet)}
+
+  .hos{background:
+      radial-gradient(ellipse at 70% 0%, #f4c27a55, transparent 60%),
+      linear-gradient(180deg,var(--bor) 0%, var(--bor-sotet) 100%);
+    color:var(--krem);padding:56px 16px 64px;text-align:center}
+  .hos h1{font-size:clamp(32px,6vw,54px);margin:0 0 6px;font-weight:normal}
+  .hos .al{font-style:italic;opacity:.9;margin:0 0 22px}
+  .allapot{display:inline-flex;align-items:center;gap:8px;background:#00000033;
+    padding:8px 14px;border-radius:999px;font:15px system-ui,sans-serif}
+  .pont{width:10px;height:10px;border-radius:50%;background:var(--halvany)}
+  .pont.nyitva{background:#5fd67a;box-shadow:0 0 0 4px #5fd67a33}
+  .pont.zarva{background:#ff7b6b}
+  .gombok{margin-top:24px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .gomb{display:inline-block;padding:12px 20px;border-radius:6px;text-decoration:none;
+    font:600 15px system-ui,sans-serif;border:0;cursor:pointer}
+  .gomb.fo{background:var(--arany);color:#1d1406}
+  .gomb.mas{background:transparent;color:var(--krem);border:1px solid #ffffff88}
+  .dij{margin-top:26px;font:13px system-ui,sans-serif;opacity:.85}
+
+  main{max-width:1040px;margin:0 auto;padding:0 16px}
+  section{padding:48px 0;border-bottom:1px solid var(--vonal)}
+  h2{font-weight:normal;font-size:30px;margin:0 0 6px;color:var(--bor-sotet)}
+  .lead{color:var(--halvany);margin:0 0 24px}
+  .racs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .kartya{background:var(--papir);border:1px solid var(--vonal);border-radius:10px;padding:18px}
+  .kartya h3{margin:0 0 6px;font-size:19px;color:var(--bor)}
+  .minta{font:13px system-ui,sans-serif;background:#fff3cd;color:#6b5200;
+    border:1px dashed #d9b649;border-radius:6px;padding:8px 10px;margin:0 0 18px}
+
+  .naplemente{display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+    background:linear-gradient(90deg,#fbe3c0,#f6c9a4);border-radius:10px;padding:16px 18px}
+  .naplemente .ido{font-size:34px;color:var(--bor-sotet)}
+
+  .etlap-szuro{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .etlap-szuro button{font:14px system-ui,sans-serif;padding:6px 12px;border-radius:999px;
+    border:1px solid var(--vonal);background:var(--papir);cursor:pointer}
+  .etlap-szuro button[aria-pressed=true]{background:var(--bor);color:#fff;border-color:var(--bor)}
+  .tetel{display:flex;justify-content:space-between;gap:12px;padding:10px 0;
+    border-bottom:1px dotted var(--vonal)}
+  .tetel small{display:block;color:var(--halvany);font-size:14px}
+  .tetel .ar{white-space:nowrap;color:var(--bor-sotet)}
+
+  table.nyitva{border-collapse:collapse;width:100%;max-width:420px;font:15px system-ui,sans-serif}
+  table.nyitva td{padding:6px 4px;border-bottom:1px solid var(--vonal)}
+  table.nyitva tr.ma td{font-weight:700;color:var(--bor)}
+
+  form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  label{font:14px system-ui,sans-serif;display:grid;gap:4px}
+  input,select,textarea{font:16px system-ui,sans-serif;padding:9px 10px;border:1px solid #cdbda3;
+    border-radius:6px;background:#fff;width:100%}
+  .teljes{grid-column:1/-1}
+  .uzenet{font:14px system-ui,sans-serif;padding:10px;border-radius:6px;display:none}
+  .uzenet.hiba{display:block;background:#fde2df;color:#7a1d14}
+  .uzenet.ok{display:block;background:#e3f3e6;color:#1e4d27}
+
+  .jotudni li{margin-bottom:6px}
+  footer{background:var(--fa);color:#e9dcc6;padding:28px 16px;text-align:center;
+    font:14px system-ui,sans-serif}
+  footer a{color:#ffd9a0}
+  @media (max-width:640px){ nav{display:none} .hos{padding:40px 16px 48px} }
+</style>
+</head>
+<body>
+
+<div class="demo-sav"><b>Demóterv.</b> Ez nem az Öreg Harang Borozó hivatalos oldala. Az étlap, az árak és a képek helyén mintaadat áll.</div>
+
+<header class="fej">
+  <a class="logo" href="#">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4c1.3 0 2.2.9 2.2 2v1.2c5.6 1 9 5.8 9 12v7.3l3 3.5H5.8l3-3.5v-7.3c0-6.2 3.4-11 9-12V6c0-1.1.9-2 2.2-2z" fill="#b8893b"/><circle cx="20" cy="34" r="3" fill="#b8893b"/></svg>
+    <span>Öreg Harang</span>
+  </a>
+  <nav>
+    <a href="#rolunk" data-i="navRolunk">Rólunk</a>
+    <a href="#etlap" data-i="navEtlap">Étlap & borok</a>
+    <a href="#foglalas" data-i="navFoglalas">Asztalfoglalás</a>
+    <a href="#odajutas" data-i="navOdajutas">Odajutás</a>
+  </nav>
+  <div class="nyelv" role="group" aria-label="Nyelv">
+    <button data-nyelv="hu" aria-pressed="true">HU</button>
+    <button data-nyelv="de" aria-pressed="false">DE</button>
+    <button data-nyelv="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<div class="hos">
+  <h1>Öreg Harang Borozó</h1>
+  <p class="al" data-i="alcim">Borozó a hévíz-egregyi Árpád-kori templom mellett, kilátással a városra</p>
+  <div class="allapot" aria-live="polite"><span class="pont" id="pont"></span><span id="allapotSzoveg">…</span></div>
+  <div class="gombok">
+    <a class="gomb fo" href="#foglalas" data-i="gombFoglal">Asztalt foglalok</a>
+    <a class="gomb mas" href="tel:+36309279011" data-i="gombHiv">Hívás: +36 30 927 9011</a>
+  </div>
+  <div class="dij" data-i="dij">Gault&amp;Millau – az év kisvendéglője, 2013</div>
+</div>
+
+<main>
+
+<section id="rolunk">
+  <h2 data-i="rolunkCim">Rólunk</h2>
+  <p class="lead" data-i="rolunkLead">Egykori családi ház a templom tövében, a dombról a városra néz.</p>
+  <div class="racs">
+    <div class="kartya"><h3 data-i="k1c">Helyi termelők</h3><p data-i="k1">Szürkemarha, mangalica, kecske: a hús és a zöldség környékbeli gazdáktól jön.</p></div>
+    <div class="kartya"><h3 data-i="k2c">A környék borai</h3><p data-i="k2">A borlista a környékbeli borászok boraira épül.</p></div>
+    <div class="kartya"><h3 data-i="k3c">Panoráma</h3><p data-i="k3">A dombról Hévízre és a környékre látni.</p></div>
+  </div>
+  <div style="margin-top:20px" class="naplemente">
+    <div>
+      <div style="font:14px system-ui,sans-serif" data-i="napCim">Ma naplemente Egregyen</div>
+      <div class="ido" id="naplemente">–</div>
+    </div>
+    <p style="margin:0;flex:1;min-width:220px" id="napTipp"></p>
+  </div>
+</section>
+
+<section id="etlap">
+  <h2 data-i="etlapCim">Étlap & borok</h2>
+  <p class="minta" data-i="mintaEtlap">Mintaétlap. A valódi ételekkel és árakkal töltjük fel, és ti magatok is tudjátok frissíteni.</p>
+  <div class="etlap-szuro" role="group">
+    <button data-kat="mind" aria-pressed="true" data-i="szMind">Mind</button>
+    <button data-kat="eloetel" aria-pressed="false" data-i="szElo">Előételek</button>
+    <button data-kat="fo" aria-pressed="false" data-i="szFo">Főételek</button>
+    <button data-kat="bor" aria-pressed="false" data-i="szBor">Borok</button>
+  </div>
+  <div id="etlapLista"></div>
+</section>
+
+<section id="nyitvatartas">
+  <h2 data-i="nyitvaCim">Nyitvatartás</h2>
+  <p class="minta" data-i="mintaNyitva">Minta-nyitvatartás. Egy helyen állítjuk be, és az oldalon mindenhol ez jelenik meg, a „most nyitva” kijelzéssel és a foglalással együtt.</p>
+  <table class="nyitva" id="nyitvaTabla"></table>
+</section>
+
+<section id="foglalas">
+  <h2 data-i="foglalasCim">Asztalfoglalás</h2>
+  <p class="lead" data-i="foglalasLead">Töltsd ki, és a telefonod kész SMS-t nyit, amit csak el kell küldeni. Külföldi vendégeknek is működik.</p>
+  <form id="foglalasForm" novalidate>
+    <label><span data-i="fNev">Név</span><input name="nev" required autocomplete="name"></label>
+    <label><span data-i="fFo">Hány fő?</span><input name="fo" type="number" min="1" max="40" value="2" required></label>
+    <label><span data-i="fNap">Nap</span><input name="nap" type="date" required></label>
+    <label><span data-i="fIdo">Időpont</span><select name="ido" required></select></label>
+    <label class="teljes"><span data-i="fMegj">Megjegyzés (pl. ablak melletti asztal, születésnap)</span><textarea name="megj" rows="2"></textarea></label>
+    <div class="teljes"><button class="gomb fo" type="submit" data-i="fKuld">SMS előkészítése</button></div>
+    <div class="uzenet teljes" id="foglalasUzenet" role="status"></div>
+  </form>
+</section>
+
+<section id="odajutas">
+  <h2 data-i="odaCim">Odajutás és jó tudni</h2>
+  <div class="racs">
+    <div class="kartya">
+      <h3 data-i="cimCim">Cím</h3>
+      <p>8380 Hévíz, Zrínyi utca 181.<br><span data-i="cimMegj">Egregyen, az Árpád-kori templom mellett. A Zrínyi Miklós utca felől a legkönnyebb.</span></p>
+      <a class="gomb fo" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=H%C3%A9v%C3%ADz%2C+Zr%C3%ADnyi+utca+181" data-i="utvonal">Útvonaltervezés</a>
+    </div>
+    <div class="kartya">
+      <h3 data-i="jtCim">Jó tudni</h3>
+      <ul class="jotudni">
+        <li data-i="jt1">Ingyenes parkolás közvetlenül az épület mellett.</li>
+        <li><span data-i="jt3">Fizetés:</span> <em data-i="jt3b">[itt áll majd, hogy készpénz, kártya vagy SZÉP-kártya]</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Öreg Harang Borozó · 8380 Hévíz, Zrínyi utca 181. · <a href="tel:+36309279011">+36 30 927 9011</a><br>
+  <span data-i="lab">Demóterv. Ez nem az Öreg Harang Borozó hivatalos oldala.</span>
+</footer>
+
+<script>
+/* ---- Beállítások: egy helyen, innen dolgozik az egész oldal ---- */
+const TEL = "+36309279011";
+const LAT = 46.795, LON = 17.198;            // Hévíz-Egregy
+// 0 = vasárnap … 6 = szombat; null = zárva. MINTAADAT, a tulajdonossal egyeztetendő.
+const NYITVA = {1:["15:00","22:00"],2:["15:00","22:00"],3:["15:00","22:00"],4:["15:00","22:00"],
+                5:["15:00","22:00"],6:["15:00","22:00"],0:["15:00","22:00"]};
+
+const ETLAP = [
+  {k:"eloetel", hu:"Házi tepertőkrém lilahagymával", de:"Hausgemachter Grammelaufstrich mit roten Zwiebeln", en:"Homemade crackling spread with red onion", ar:"minta"},
+  {k:"eloetel", hu:"Füstölt kecskesajt, sült cékla", de:"Geräucherter Ziegenkäse, geröstete Rote Bete", en:"Smoked goat cheese, roasted beetroot", ar:"minta"},
+  {k:"fo", hu:"Szürkemarha-pörkölt galuskával", de:"Graurind-Gulasch mit Nockerln", en:"Grey cattle stew with dumplings", ar:"minta"},
+  {k:"fo", hu:"Mangalicatarja, tört burgonya", de:"Mangalica-Nacken, Stampfkartoffeln", en:"Mangalica pork neck, crushed potatoes", ar:"minta"},
+  {k:"fo", hu:"Kecskegulyás", de:"Ziegengulasch", en:"Goat goulash", ar:"minta"},
+  {k:"bor", hu:"Olaszrizling – helyi termelő, 1 dl", de:"Welschriesling – lokaler Winzer, 0,1 l", en:"Olaszrizling – local winemaker, 100 ml", ar:"minta"},
+  {k:"bor", hu:"Kéknyelű – Badacsony, 1 dl", de:"Kéknyelű – Badacsony, 0,1 l", en:"Kéknyelű – Badacsony, 100 ml", ar:"minta"},
+  {k:"bor", hu:"Zalai vörös cuvée, 1 dl", de:"Rotwein-Cuvée aus Zala, 0,1 l", en:"Red cuvée from Zala, 100 ml", ar:"minta"}
+];
+
+const T = {
+ hu:{navRolunk:"Rólunk",navEtlap:"Étlap & borok",navFoglalas:"Asztalfoglalás",navOdajutas:"Odajutás",
+  alcim:"Borozó a hévíz-egregyi Árpád-kori templom mellett, kilátással a városra",
+  gombFoglal:"Asztalt foglalok",gombHiv:"Hívás: +36 30 927 9011",dij:"Gault&Millau – az év kisvendéglője, 2013",
+  rolunkCim:"Rólunk",rolunkLead:"Egykori családi ház a templom tövében, a dombról a városra néz.",
+  k1c:"Helyi termelők",k1:"Szürkemarha, mangalica, kecske: a hús és a zöldség környékbeli gazdáktól jön.",
+  k2c:"A környék borai",k2:"A borlista a környékbeli borászok boraira épül.",
+  k3c:"Panoráma",k3:"A dombról Hévízre és a környékre látni.",
+  napCim:"Ma naplemente Egregyen",
+  napTipp:(f)=>`A panorámához érdemes ${f}-ra asztalt foglalni.`,
+  napZarva:"Ma zárva vagyunk, de nézd meg a következő nyitott napot lent.",
+  etlapCim:"Étlap & borok",mintaEtlap:"Mintaétlap. A valódi ételekkel és árakkal töltjük fel, és ti magatok is tudjátok frissíteni.",
+  szMind:"Mind",szElo:"Előételek",szFo:"Főételek",szBor:"Borok",
+  nyitvaCim:"Nyitvatartás",mintaNyitva:"Minta-nyitvatartás. Egy helyen állítjuk be, és az oldalon mindenhol ez jelenik meg, a „most nyitva” kijelzéssel és a foglalással együtt.",
+  napok:["Vasárnap","Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat"],zarva:"Zárva",
+  most_nyitva:(z)=>`Most nyitva, ${z}-ig`, most_zarva:(n)=>`Most zárva · nyitunk: ${n}`, ma:"ma", holnap:"holnap",
+  foglalasCim:"Asztalfoglalás",foglalasLead:"Töltsd ki, és a telefonod kész SMS-t nyit, amit csak el kell küldeni. Külföldi vendégeknek is működik.",
+  fNev:"Név",fFo:"Hány fő?",fNap:"Nap",fIdo:"Időpont",fMegj:"Megjegyzés (pl. ablak melletti asztal, születésnap)",fKuld:"SMS előkészítése",
+  hNev:"Add meg a neved.",hNap:"Válassz egy napot, ma vagy későbbit.",hZart:"Ezen a napon zárva vagyunk. Válassz másik napot.",hIdo:"Válassz időpontot.",
+  ok:"Megnyílt az SMS. Küldd el, és visszaigazoljuk. Ha nem nyílt meg, hívj minket: +36 30 927 9011.",
+  sms:(d)=>`Asztalfoglalás – Öreg Harang\nNév: ${d.nev}\n${d.nap}, ${d.ido}, ${d.fo} fő${d.megj?"\nMegj.: "+d.megj:""}`,
+  odaCim:"Odajutás és jó tudni",cimCim:"Cím",cimMegj:"Egregyen, az Árpád-kori templom mellett. A Zrínyi Miklós utca felől a legkönnyebb.",
+  utvonal:"Útvonaltervezés",jtCim:"Jó tudni",jt1:"Ingyenes parkolás közvetlenül az épület mellett.", jt3:"Fizetés:",jt3b:"[itt áll majd, hogy készpénz, kártya vagy SZÉP-kártya]",
+  lab:"Demóterv. Ez nem az Öreg Harang Borozó hivatalos oldala.",ar:"mintaár"},
+ de:{navRolunk:"Über uns",navEtlap:"Speisen & Weine",navFoglalas:"Tisch reservieren",navOdajutas:"Anfahrt",
+  alcim:"Weinstube neben der Kirche aus der Árpádenzeit in Hévíz-Egregy, mit Blick über die Stadt",
+  gombFoglal:"Tisch reservieren",gombHiv:"Anrufen: +36 30 927 9011",dij:"Gault&Millau – Kleines Restaurant des Jahres 2013",
+  rolunkCim:"Über uns",rolunkLead:"Ein ehemaliges Familienhaus am Fuß der Kirche, mit Blick vom Hügel über die Stadt.",
+  k1c:"Lokale Erzeuger",k1:"Graurind, Mangalica, Ziege: Fleisch und Gemüse kommen von Bauern aus der Umgebung.",
+  k2c:"Weine der Region",k2:"Die Weinkarte setzt auf Winzer aus der Umgebung.",
+  k3c:"Panorama",k3:"Vom Hügel blickt man über Hévíz und die Umgebung.",
+  napCim:"Sonnenuntergang heute in Egregy",
+  napTipp:(f)=>`Für das Panorama reservieren Sie am besten für ${f} Uhr.`,
+  napZarva:"Heute haben wir geschlossen. Den nächsten Öffnungstag finden Sie unten.",
+  etlapCim:"Speisen & Weine",mintaEtlap:"Beispielkarte. Sie wird mit den echten Gerichten und Preisen gefüllt.",
+  szMind:"Alle",szElo:"Vorspeisen",szFo:"Hauptgerichte",szBor:"Weine",
+  nyitvaCim:"Öffnungszeiten",mintaNyitva:"Beispiel-Öffnungszeiten. Sie werden an einer Stelle gepflegt und gelten überall auf der Seite.",
+  napok:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],zarva:"Geschlossen",
+  most_nyitva:(z)=>`Jetzt geöffnet, bis ${z} Uhr`, most_zarva:(n)=>`Jetzt geschlossen · wir öffnen ${n}`, ma:"heute", holnap:"morgen",
+  foglalasCim:"Tisch reservieren",foglalasLead:"Formular ausfüllen, Ihr Telefon öffnet eine fertige SMS. Funktioniert auch mit ausländischer Nummer.",
+  fNev:"Name",fFo:"Personen",fNap:"Tag",fIdo:"Uhrzeit",fMegj:"Anmerkung (z. B. Fensterplatz, Geburtstag)",fKuld:"SMS vorbereiten",
+  hNev:"Bitte geben Sie Ihren Namen an.",hNap:"Bitte wählen Sie heute oder einen späteren Tag.",hZart:"An diesem Tag haben wir geschlossen.",hIdo:"Bitte wählen Sie eine Uhrzeit.",
+  ok:"Die SMS wurde geöffnet. Bitte senden, wir bestätigen. Oder rufen Sie an: +36 30 927 9011.",
+  sms:(d)=>`Reservierung – Öreg Harang\nName: ${d.nev}\n${d.nap}, ${d.ido}, ${d.fo} Pers.${d.megj?"\nAnm.: "+d.megj:""}`,
+  odaCim:"Anfahrt & gut zu wissen",cimCim:"Adresse",cimMegj:"In Egregy, neben der Kirche aus der Árpádenzeit. Am einfachsten über die Zrínyi Miklós utca.",
+  utvonal:"Route planen",jtCim:"Gut zu wissen",jt1:"Kostenlose Parkplätze direkt am Haus.", jt3:"Bezahlung:",jt3b:"[Bar, Karte oder SZÉP-Karte – wird ergänzt]",
+  lab:"Entwurf. Dies ist nicht die offizielle Seite der Öreg Harang Weinstube.",ar:"Beispielpreis"},
+ en:{navRolunk:"About",navEtlap:"Food & wine",navFoglalas:"Book a table",navOdajutas:"Getting here",
+  alcim:"Wine tavern beside the Árpád-era church in Hévíz-Egregy, overlooking the town",
+  gombFoglal:"Book a table",gombHiv:"Call: +36 30 927 9011",dij:"Gault&Millau – Small Restaurant of the Year 2013",
+  rolunkCim:"About",rolunkLead:"A former family home at the foot of the church, looking out over the town from the hill.",
+  k1c:"Local producers",k1:"Grey cattle, Mangalica pork, goat: meat and vegetables come from farmers nearby.",
+  k2c:"Local wines",k2:"The wine list is built on winemakers from the area.",
+  k3c:"The view",k3:"From the hill you look out over Hévíz and the surroundings.",
+  napCim:"Sunset in Egregy today",
+  napTipp:(f)=>`For the view, book a table for ${f}.`,
+  napZarva:"We are closed today. See the next opening day below.",
+  etlapCim:"Food & wine",mintaEtlap:"Sample menu. It will be filled with the real dishes and prices.",
+  szMind:"All",szElo:"Starters",szFo:"Mains",szBor:"Wines",
+  nyitvaCim:"Opening hours",mintaNyitva:"Sample opening hours. They are set in one place and used everywhere on the site.",
+  napok:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],zarva:"Closed",
+  most_nyitva:(z)=>`Open now, until ${z}`, most_zarva:(n)=>`Closed now · opens ${n}`, ma:"today", holnap:"tomorrow",
+  foglalasCim:"Book a table",foglalasLead:"Fill in the form and your phone opens a ready-made text message. Works with foreign numbers too.",
+  fNev:"Name",fFo:"Guests",fNap:"Date",fIdo:"Time",fMegj:"Notes (e.g. window table, birthday)",fKuld:"Prepare text message",
+  hNev:"Please enter your name.",hNap:"Please choose today or a later date.",hZart:"We are closed on that day.",hIdo:"Please choose a time.",
+  ok:"Your text message is open. Send it and we will confirm. Or call us: +36 30 927 9011.",
+  sms:(d)=>`Table booking – Öreg Harang\nName: ${d.nev}\n${d.nap}, ${d.ido}, ${d.fo} guests${d.megj?"\nNotes: "+d.megj:""}`,
+  odaCim:"Getting here & good to know",cimCim:"Address",cimMegj:"In Egregy, next to the Árpád-era church. Easiest from Zrínyi Miklós utca.",
+  utvonal:"Get directions",jtCim:"Good to know",jt1:"Free parking right next to the building.", jt3:"Payment:",jt3b:"[cash, card or SZÉP card – to be added]",
+  lab:"Design draft. This is not the official website of Öreg Harang.",ar:"sample price"}
+};
+
+let nyelv = "hu";
+try { const m = localStorage.getItem("oh-nyelv"); if (m && T[m]) nyelv = m; } catch(e){}
+
+/* ---- Budapesti idő ---- */
+function bpMost(){
+  const p = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Budapest",weekday:"short",
+    year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"})
+    .formatToParts(new Date()).reduce((o,x)=>(o[x.type]=x.value,o),{});
+  const nap = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday);
+  return {nap, perc:+p.hour*60+ +p.minute, datum:`${p.year}-${p.month}-${p.day}`};
+}
+const percbe = s => { const [h,m]=s.split(":").map(Number); return h*60+m; };
+const idobe = p => `${String(Math.floor(p/60)).padStart(2,"0")}:${String(p%60).padStart(2,"0")}`;
+
+function allapot(){
+  const t=T[nyelv], m=bpMost(), ma=NYITVA[m.nap];
+  const pont=document.getElementById("pont"), sz=document.getElementById("allapotSzoveg");
+  if (ma && m.perc>=percbe(ma[0]) && m.perc<percbe(ma[1])) {
+    pont.className="pont nyitva"; sz.textContent=t.most_nyitva(ma[1]); return;
+  }
+  for (let i=0;i<8;i++){
+    const n=(m.nap+i)%7, h=NYITVA[n];
+    if (!h) continue;
+    if (i===0 && m.perc>=percbe(h[0])) continue;
+    const mikor = i===0 ? t.ma : i===1 ? t.holnap : t.napok[n].toLowerCase();
+    pont.className="pont zarva"; sz.textContent=t.most_zarva(`${mikor} ${h[0]}`); return;
+  }
+}
+
+function nyitvaTabla(){
+  const t=T[nyelv], ma=bpMost().nap, sor=[1,2,3,4,5,6,0];
+  document.getElementById("nyitvaTabla").innerHTML = sor.map(n=>{
+    const h=NYITVA[n];
+    return `<tr class="${n===ma?"ma":""}"><td>${t.napok[n]}</td><td>${h?h[0]+"–"+h[1]:t.zarva}</td></tr>`;
+  }).join("");
+}
+
+/* ---- Naplemente (NOAA közelítés) ---- */
+function naplemente(datumStr){
+  const d = new Date(datumStr+"T12:00:00Z");
+  const n = Math.floor((d - Date.UTC(d.getUTCFullYear(),0,0))/864e5);
+  const g = 2*Math.PI/365*(n-1);
+  const eqt = 229.18*(0.000075+0.001868*Math.cos(g)-0.032077*Math.sin(g)-0.014615*Math.cos(2*g)-0.040849*Math.sin(2*g));
+  const dek = 0.006918-0.399912*Math.cos(g)+0.070257*Math.sin(g)-0.006758*Math.cos(2*g)+0.000907*Math.sin(2*g)-0.002697*Math.cos(3*g)+0.00148*Math.sin(3*g);
+  const lat = LAT*Math.PI/180;
+  const ha = Math.acos(Math.cos(90.833*Math.PI/180)/(Math.cos(lat)*Math.cos(dek)) - Math.tan(lat)*Math.tan(dek));
+  const utcPerc = 720 - 4*(LON - ha*180/Math.PI) - eqt;
+  return new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),0,Math.round(utcPerc)));
+}
+function napBlokk(){
+  const t=T[nyelv], m=bpMost(), nl=naplemente(m.datum);
+  const s = nl.toLocaleTimeString("hu-HU",{timeZone:"Europe/Budapest",hour:"2-digit",minute:"2-digit"});
+  document.getElementById("naplemente").textContent = s;
+  const h=NYITVA[m.nap], tipp=document.getElementById("napTipp");
+  if (!h) { tipp.textContent=t.napZarva; return; }
+  const [hh,mm]=s.split(":").map(Number);
+  let p = Math.floor((hh*60+mm-45)/30)*30;
+  p = Math.max(p, percbe(h[0]));
+  tipp.textContent = t.napTipp(idobe(p));
+}
+
+/* ---- Étlap ---- */
+let kat="mind";
+function etlap(){
+  const t=T[nyelv];
+  document.getElementById("etlapLista").innerHTML = ETLAP.filter(x=>kat==="mind"||x.k===kat).map(x=>
+    `<div class="tetel"><div>${x[nyelv]}${nyelv!=="hu"?`<small>${x.hu}</small>`:""}</div><div class="ar">${t.ar}</div></div>`).join("");
+}
+document.querySelectorAll("[data-kat]").forEach(b=>b.addEventListener("click",()=>{
+  kat=b.dataset.kat;
+  document.querySelectorAll("[data-kat]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  etlap();
+}));
+
+/* ---- Foglalás ---- */
+const form=document.getElementById("foglalasForm");
+function napNyitva(datum){ return NYITVA[new Date(datum+"T12:00:00Z").getUTCDay()]; }
+function idopontok(){
+  const sel=form.ido, d=form.nap.value, h=d?napNyitva(d):null, regi=sel.value;
+  sel.innerHTML="";
+  if(!h){ sel.innerHTML=`<option value="">–</option>`; return; }
+  const m=bpMost();
+  for(let p=percbe(h[0]); p<=percbe(h[1])-90; p+=30){
+    if (d===m.datum && p<=m.perc+30) continue;
+    sel.add(new Option(idobe(p), idobe(p)));
+  }
+  if(!sel.options.length) sel.innerHTML=`<option value="">–</option>`;
+  if([...sel.options].some(o=>o.value===regi)) sel.value=regi;
+}
+form.nap.addEventListener("change",idopontok);
+form.addEventListener("submit",e=>{
+  e.preventDefault();
+  const t=T[nyelv], u=document.getElementById("foglalasUzenet"), m=bpMost();
+  const hiba = s => { u.className="uzenet teljes hiba"; u.textContent=s; };
+  const d={nev:form.nev.value.trim(),fo:form.fo.value,nap:form.nap.value,ido:form.ido.value,megj:form.megj.value.trim()};
+  if(!d.nev) return hiba(t.hNev);
+  if(!d.nap || d.nap<m.datum) return hiba(t.hNap);
+  if(!napNyitva(d.nap)) return hiba(t.hZart);
+  if(!d.ido) return hiba(t.hIdo);
+  const sep = /iPhone|iPad|Mac/.test(navigator.userAgent) ? "&" : "?";
+  location.href = `sms:${TEL}${sep}body=${encodeURIComponent(t.sms(d))}`;
+  u.className="uzenet teljes ok"; u.textContent=t.ok;
+});
+
+/* ---- Nyelvváltás ---- */
+function forditas(){
+  const t=T[nyelv];
+  document.documentElement.lang=nyelv;
+  document.querySelectorAll("[data-i]").forEach(el=>{ const v=t[el.dataset.i]; if(typeof v==="string") el.textContent=v; });
+  document.querySelectorAll("[data-nyelv]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.nyelv===nyelv));
+  allapot(); nyitvaTabla(); napBlokk(); etlap();
+}
+document.querySelectorAll("[data-nyelv]").forEach(b=>b.addEventListener("click",()=>{
+  nyelv=b.dataset.nyelv; try{localStorage.setItem("oh-nyelv",nyelv);}catch(e){} forditas();
+}));
+
+form.nap.min = bpMost().datum;
+form.nap.value = bpMost().datum;
+forditas(); idopontok();
+setInterval(allapot, 60000);
+</script>
+</body>
+</html>

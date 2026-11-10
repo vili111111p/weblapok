@@ -1,0 +1,45 @@
+CÍMZETT: [ellenőrizd az oregharang.hu-n vagy a Facebook-oldalukon; ha nincs e-mail, Facebook-üzenet vagy telefon: +36 30 927 9011]
+TÁRGY: Weboldal-ötlet az Öreg Harangnak, három nyelven, asztalfoglalással
+MELLÉKLET: 4_oreg_harang_demo.html
+
+-----------------------------------------------------------------
+
+Kedves Öreg Harang csapat!
+
+[Neved] vagyok, weboldalakat készítek. Azért írok, mert az Öreg Harang azon kevés helyek egyike, amelyekről a vendégek évek óta ugyanazzal a lelkesedéssel írnak: a templom melletti ház, a kilátás, a helyi szürkemarha és mangalica, a környékbeli borok. A Gault&Millau-díj sem véletlen.
+
+Amikor utánanéztem a borozónak a neten, feltűnt néhány dolog, ami szerintem vendégeket visz el:
+
+- Négy különböző nyitvatartást találtam különböző oldalakon (14–22, 15–22, 15–23, és olyat is, ami szerint vasárnap zárva vannak). Egy turista nem tudja, melyiknek higgyen.
+- A régi weboldal telefonon nehezen használható, pedig a hévízi vendégek többsége a szállodában, telefonról keres helyet estére.
+- Német és angol nyelvű információ alig van, pedig a vendégek jó része osztrák és német.
+- Egy értékelő azt írta, csak a számlánál derült ki, hogy nem lehet kártyával fizetni. Ez egy mondattal megelőzhető lenne.
+
+Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki. Csatoltam, böngészőben megnyílik, nem kell hozzá semmit telepíteni. Amit tud:
+
+- Magyarul, németül és angolul, egy gombnyomással váltható.
+- Az oldal tetején mindig látszik, hogy most nyitva vannak-e, és ha nem, mikor nyitnak. A nyitvatartást egy helyen kell beállítani, és mindenhol az jelenik meg.
+- Asztalfoglalás: a vendég kitölti a nevét, a napot, az időpontot és a létszámot, a telefonja pedig kész SMS-t nyit önöknek. Zárt napra vagy záráshoz túl közeli időpontra nem enged foglalni.
+- Kiírja a mai naplemente idejét, és azt, hogy mikorra érdemes asztalt foglalni a kilátás miatt.
+- Étlap és borlista kategóriákra bontva. Most mintaadat van benne, ezt a valódi kínálattal töltenénk fel.
+- „Jó tudni” rész: cím, útvonaltervezés egy gombbal, ingyenes parkolás, fizetési módok.
+
+**Ez csak egy elképzelés, bármit lehet rajta változtatni.** A végleges oldalra természetesen az önök saját fotói, logója és szövegei kerülnének.
+
+Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak. Így minden hivatalos, és a díjról rendes papír készül. A szerződésmintát kérésre szívesen elküldöm.
+
+Ha érdekli önöket, szívesen elmegyek személyesen is, vagy telefonon megbeszélhetjük. Árajánlatot is küldök, ha szeretnék.
+
+Üdvözlettel:
+[Neved]
+[telefonszámod]
+[e-mail címed]
+
+-----------------------------------------------------------------
+JEGYZETEK (ezt ne küldd el)
+
+- Küldés előtt hívd fel őket, vagy nézd meg a Google Mapsen, hogy még működnek-e, és mi a mostani nyitvatartásuk. Ezt írd be a demóba (index.html, NYITVA sor).
+- A fizetési mód nincs ellenőrizve. A demóban szögletes zárójeles helykitöltő áll a helyén.
+- A We Love Balaton cikke (2014) szerint az alapító Fisli Gábor. Ha meggyőződtél róla, hogy még ő viszi a helyet, a megszólítás lehet „Kedves Fisli Gábor!”.
+- Facebook-üzenetnél rövidítsd: az első bekezdés, a négy pont közül kettő, a demó mondata és a kiemelt mondat elég. A demót ott linkként nem tudod csatolni, ezért írd, hogy e-mailben elküldöd.
+- Ajánlott ár: 180–250 ezer Ft egyszeri díj és 8–10 ezer Ft havidíj (bruttó). Az első levélben ne írj árat.
