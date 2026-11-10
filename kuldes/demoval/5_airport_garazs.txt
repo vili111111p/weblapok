@@ -1,12 +1,11 @@
 CÍMZETT: airportgarazs@gmail.com
 TÁRGY: Weboldal-ötlet az Airport Garázsnak, online időpontkéréssel
-MELLÉKLET: demok/airport-garazs/index.html
 -----------------------------------------------------------------
 Tisztelt Airport Garázs!
 
 [Neved] vagyok, weboldalakat készítek kisvállalkozásoknak. Azért írok, mert az Airport Garázsnak jelenleg nincs saját weboldala. Aki a XXII. kerületben autószervizt keres a telefonján, az most csak egy térképes bejegyzést talál önökről, a szolgáltatásokat és az időpontkérés módját nem.
 
-Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Csatoltam, böngészőben megnyílik, nem kell hozzá semmit telepíteni. Amit tud:
+Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Amit tud:
 
 - Időpontkérés munkalap-űrlappal: az ügyfél megadja az autó adatait, a hibát és a kívánt napot, így önök már a hívás előtt tudják, mire számítsanak.
 - Műszaki vizsga lejárat-számoló: az ügyfél beírja, mikor járt le utoljára a vizsgája, és látja, mikor esedékes a következő. Ez jó ok arra, hogy visszajöjjön önökhöz.
@@ -14,9 +13,11 @@ Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal.
 
 **Ez csak egy elképzelés, bármit lehet rajta változtatni.**
 
+Ha kíváncsi rá, elég visszaírni, és elküldöm. Böngészőben megnyílik, nem kell hozzá semmit telepíteni.
+
 Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak, így minden hivatalos, és a díjról rendes papír készül. A szerződésmintát kérésre szívesen elküldöm.
 
-Ha érdekli önöket, szívesen felhívom vagy személyesen is megmutatom. Árajánlatot is küldök, ha szeretnék.
+Ha érdekli önöket, szívesen személyesen is megmutatom. Árajánlatot is küldök, ha szeretnék.
 
 Üdvözlettel:
 [Neved]

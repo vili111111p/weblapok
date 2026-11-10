@@ -1,18 +1,19 @@
 CÍMZETT: gubinyi.julika@gmail.com
 TÁRGY: Weboldal-ötlet a Julika Virágnak, névnapkeresővel
-MELLÉKLET: demok/julika-virag/index.html
 -----------------------------------------------------------------
 Kedves Julika!
 
 [Neved] vagyok, weboldalakat készítek kisvállalkozásoknak. Azért írok, mert a virágboltnak jelenleg nincs saját weboldala. Aki a XVI. kerületben virágot keres egy névnapra vagy születésnapra, az a telefonján nem talál önökről semmit.
 
-Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Csatoltam, böngészőben megnyílik, nem kell hozzá semmit telepíteni. Amit tud:
+Készítettem egy demót, hogy megmutassam, hogyan nézhetne ki egy ilyen oldal. Amit tud:
 
 - Az oldal tetején mindig ott a mai névnap, ez emlékezteti a látogatókat, hogy virágot vegyenek.
 - Névnapkereső: bármelyik névre megmutatja, mikor van a névnapja.
 - Csokor-összeállító: a vásárló kiválasztja a virágokat és a színeket, és kártyaszöveget is írhat hozzá.
 
 **Ez csak egy elképzelés, bármit lehet rajta változtatni.** A végleges oldalra a bolt saját fotói és árai kerülnének.
+
+Ha kíváncsi rá, elég visszaírni, és elküldöm. Böngészőben megnyílik, nem kell hozzá semmit telepíteni.
 
 Magamról: 17 éves vagyok, és megbízási szerződéssel dolgozom, amit a szüleim is aláírnak, így minden hivatalos, és a díjról rendes papír készül. A szerződésmintát kérésre szívesen elküldöm.
 
